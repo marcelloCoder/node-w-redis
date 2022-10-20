@@ -1,0 +1,35 @@
+{
+  "name": "node-com-redis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cluster-key-slot": "^1.1.0",
+    "denque": "^2.1.0",
+    "generate-function": "^2.3.1",
+    "generic-pool": "^3.8.2",
+    "iconv-lite": "^0.6.3",
+    "is-property": "^1.0.2",
+    "long": "^4.0.0",
+    "lru-cache": "^6.0.0",
+    "mysql2": "^2.3.3",
+    "named-placeholders": "^1.1.2",
+    "promise-redis": "^0.0.5",
+    "pseudomap": "^1.0.2",
+    "redis": "^4.3.1",
+    "redis-commands": "^1.7.0",
+    "safer-buffer": "^2.1.2",
+    "seq-queue": "^0.0.5",
+    "sqlstring": "^2.3.3",
+    "yallist": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
