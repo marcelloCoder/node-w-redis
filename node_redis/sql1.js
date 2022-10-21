@@ -11,18 +11,20 @@
         console.error(error);
     });
     
-        const cod_p = 7;
+        const cod_p = 90001723653;
         console.time("redissave");
     //for(let i=0;i<5;i++){
-            let cargo = await client.get(`${cod_p}`);
-        if (!cargo) {
-            const [rows] = await conn.query(`select * from cargo where cod_cargo = ? ` ,[cod_p]);
-            cargo = rows[0];
-            await client.set(`${cod_p}`, JSON.stringify(cargo));
-            console.log(cargo.descricao);
+            let bens = await client.get(`${cod_p}`);
+        if (!bens) {
+            const [rows] = await conn.query(`select * from bens where sq_cand = ? ` ,[cod_p]);
+            bens = rows[0];
+            await client.set(`${cod_p}`, JSON.stringify(bens));
+            
         }
         else
-            console.log(JSON.parse(cargo).descricao);
+            console.log(JSON.parse(bens));
+            
+    
     //}
     console.timeEnd("redissave");
         
