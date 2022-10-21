@@ -11,18 +11,20 @@
         console.error(error);
     });
     
-        const cod_p = 7;
+        const cod_p = 20;
         console.time("redissave");
     //for(let i=0;i<5;i++){
-            let cargo = await client.get(`${cod_p}`);
-        if (!cargo) {
-            const [rows] = await conn.query(`select * from cargo where cod_cargo = ? ` ,[cod_p]);
-            cargo = rows[0];
-            await client.set(`${cod_p}`, JSON.stringify(cargo));
-            console.log(cargo.descricao);
+            let partido = await client.get(`${cod_p}`);
+        if (!partido) {
+            const [rows] = await conn.query(`SELECT * FROM partido  ` ,[cod_p]);
+            partido = rows[0];
+            await client.set(`${cod_p}`, JSON.stringify(partido));
+            
         }
         else
-            console.log(JSON.parse(cargo).descricao);
+            console.log(JSON.parse(partido));
+            
+    
     //}
     console.timeEnd("redissave");
         
